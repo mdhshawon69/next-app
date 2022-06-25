@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import classes from "./EventItem.module.css";
 import Button from "../ui/button";
@@ -18,7 +19,7 @@ const EventItem = (props) => {
   const explorerLink = `/events/${id}`;
   return (
     <li className={classes.item}>
-      <img src={`/${image}`} alt="" />
+      <Image src={`/${image}`} alt={title} width={340} height={250} />
       <div className={classes.content}>
         <h2>{title}</h2>
         <div className={classes.date}>
